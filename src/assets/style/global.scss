@@ -1,0 +1,8 @@
+@import './global-parts/_variables.scss';
+@import './global-parts/_reset.scss';
+
+.container {
+    max-width: 1200px;
+    height: auto;
+    margin: auto;
+}
