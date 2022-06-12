@@ -1,8 +1,22 @@
 @import './global-parts/_variables.scss';
 @import './global-parts/_reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body{
+    background-color: #444;
+    font-family: 'Roboto', sans-serif;
+}
 
 .container {
-    max-width: 1200px;
+    max-width: 90vw;
     height: auto;
+    display: flex;
+    column-gap: 20px;
+    row-gap: 30px;
+    flex-wrap: wrap;
     margin: auto;
+}
+
+.fa-star{
+    color:orange;   
 }

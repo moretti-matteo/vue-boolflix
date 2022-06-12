@@ -4,6 +4,10 @@
     align-items: $crossAxis;
 }
 
-@mixin box-shadow($x: 0px, $y: 0px, $alpha: 0px, $length: 0px, $color: black, ) {
-    box-shadow: $x $y $alpha $length $color;
+@mixin pos-abs() {
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
 }
