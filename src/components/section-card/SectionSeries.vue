@@ -12,13 +12,21 @@
 import BaseCard from '../card/BaseCard.vue';
 
 export default {
-    name: "SectionSeries",
-    props: {
-        series: []
-    },
-    components: { BaseCard }
+  name: "SectionSeries",
+  props: {
+    series: []
+  },
+  components: { BaseCard }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
+section {
+  width: 90vw;
+  margin: auto;
+
+  h1{
+    margin-bottom: 10px;
+  }
+}
 </style>

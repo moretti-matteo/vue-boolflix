@@ -17,6 +17,10 @@ body{
     margin: auto;
 }
 
+@media screen and(max-width:600px) {
+   .container{justify-content: center;}
+}
+
 .fa-star{
     color:orange;   
 }

@@ -11,6 +11,8 @@
                     <h4>Titolo originale:</h4>{{ originalTitle }}
                 </div>
 
+                <div class="lang"><img :src="getFlag(language)" alt=""></div>
+
                 <div>Vote:
                     <span v-for="n in 5" :key="n">
                         <i v-if="n <= vote" class='fa-solid fa-star'></i>
@@ -30,17 +32,26 @@
 <script>
 export default {
     name: 'BaseCard',
+    data() {
+        return {
+            myFlags: ["it", "en","ja"]
+        }
+    },
     props: {
         title: String,
         originalTitle: String,
         overview: String,
         poster: String,
-        vote: Number
+        vote: Number,
+        language: String
     },
     methods: {
         getPoster(url) {
             return url ? ('https://image.tmdb.org/t/p/w342/' + url) : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png";
-        }
+        },
+        getFlag(value) {
+            return this.myFlags.includes(value) ? require('../../assets/img/' + value + '.png') : "https://upload.wikimedia.org/wikipedia/commons/2/2f/Missing_flag.png";
+        },
     }
 }
 </script>
@@ -55,24 +66,7 @@ export default {
     position: relative;
     font-size: 0.9rem;
 
-    @media screen and(max-width:992px) {
-        & {
-            width: calc(100% / 4 - 20px);
-        }
-    }
 
-    @media screen and(max-width:600px) {
-        & {
-            width: calc(100% / 2 - 20px);
-        }
-    }
-
-    @media screen and(max-width:400px) {
-        & {
-            width: calc(100% - 20px);
-        }
-        
-    }
 
     img {
         width: 100%;
@@ -101,5 +95,31 @@ export default {
 
 
     }
+
+    .lang img{
+        max-width: 50px;
+        height: 30px;
+    }
+
+
+}
+
+@media screen and(max-width:992px) {
+    .card {
+        width: calc(100% / 4 - 20px);
+    }
+}
+
+@media screen and(max-width:600px) {
+    .card {
+        width: calc(100% / 2 - 20px);
+    }
+}
+
+@media screen and(max-width:400px) {
+    .card {
+        width: calc(100% - 20px);
+    }
+
 }
 </style>

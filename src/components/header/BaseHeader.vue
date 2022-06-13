@@ -20,9 +20,6 @@ export default {
         return {
             data,
             query: "",
-            myFlags: ["it", "en"],
-
-
         }
     },
     methods: {
@@ -58,12 +55,6 @@ export default {
 
             this.query = "";
         },
-        // getFlag(value) {
-        //     return this.checkImg(value) ? require('../../assets/img/' + value + '.png') : "https://demofree.sirv.com/nope-not-here.jpg";
-        // },
-        // checkImg(value) {
-        //     return this.myFlags.includes(value);
-        // },
         fixVote(vote) {
             return Math.ceil(vote / 2);
         }
@@ -78,15 +69,17 @@ header {
 
     @media screen and(max-width:600px) {
         & {
-            .container{flex-direction: column;} 
+            .container {
+                flex-direction: column;
+            }
         }
-        
+
     }
 
     input[type="text"],
     button {
         padding: 5px 10px;
-        
+
     }
 
     button:hover {

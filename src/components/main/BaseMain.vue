@@ -1,6 +1,5 @@
 <template>
     <main>
-
         <SectionMovies v-if="data.movies.length > 0" :movies="data.movies"></SectionMovies>
         <SectionSeries v-if="data.series.length > 0" :series="data.series"></SectionSeries>
     </main>

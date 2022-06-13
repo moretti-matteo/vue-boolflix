@@ -3,7 +3,7 @@
         <h1>Movies:</h1>
         <div class="container">
             <BaseCard v-for="movie in movies" :key="movie.id" :title="movie.title" :originalTitle="movie.original_title"
-                :overview="movie.overview" :poster="movie.poster_path" :vote="movie.vote_average" />
+                :overview="movie.overview" :poster="movie.poster_path" :vote="movie.vote_average" :language="movie.original_language" />
         </div>
 
 
